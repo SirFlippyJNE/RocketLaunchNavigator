@@ -65,7 +65,7 @@ p {
 <div class="launch-container">
 <script>
 const apiKey = '2578b44e83f2942913e1e7775ffdb3a9beed808d'; // Replace 'YOUR_API_KEY' with your actual API key
-const apiUrl = `https://ll.thespacedevs.com/2.2.0/launch/upcoming/?api_key=${apiKey}`;
+const apiUrl = `https://ll.thespacedevs.com/2.2.0/launch/upcoming/?limit=572&api_key=${apiKey}`;
 
 async function fetchRocketLaunches() {
   try {
@@ -91,7 +91,7 @@ async function fetchRocketLaunches() {
           <p>Rocket: ${rocket.configuration.full_name}</p>
           <p>NET: ${net}</p>
           <p>Status: ${status.abbrev}</p>
-          <p>NET Precestion: ${net_precision.name}</p>
+          <p>NET Precestion: ${net_precision && net_precision.name}</p> <!-- Add null check for net_precision -->
           <p>Launch Pad: ${pad.name}</p>
           <p>Pad Location: ${pad.location.name}</p>
           <p>Webcast Live: ${webcast_live}</p>
