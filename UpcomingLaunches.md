@@ -4,8 +4,6 @@
   <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
 </head>
 <body>
-  <a href="index.html">Home</a>
-
   <h1>Upcoming Launches</h1>
 
 <style>
