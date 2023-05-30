@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Rocket Launch Navigator</title>
+  <title>Upcoming Launches</title>
   <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
 </head>
 <body>
