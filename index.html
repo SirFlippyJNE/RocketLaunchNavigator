@@ -3,9 +3,23 @@
 <head>
   <title>Rocket Launch Navigator</title>
   <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
+  <a href="https://www.rocketlaunchnavigator.com" class="button">Home>
+  <a href="https://www.rocketlaunchnavigator.com/UpcomingLaunches" class="button">Launches>
   <header>Rocket Launch Navigator</header>
   <p>A navigator for upcoming rocket launches</p>
   <style>
+    .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+    }
+
+    .button:hover {
+      background-color: #23527c;
+    }
     body {
       display: flex;
       flex-direction: column;
@@ -60,8 +74,6 @@
     }
   </style>
 </head>
-<a href="index.html" class="button">Home</a>
-<a href="UpcomingLaunches.md" class="button">Launches</a>
 <body>
   <div class="launch-container">
     <script>
