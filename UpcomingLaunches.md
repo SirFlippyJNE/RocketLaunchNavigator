@@ -5,7 +5,6 @@
 </head>
 <body>
   <h1>Upcoming Launches</h1>
-
 <style>
 body {
   display: flex;
