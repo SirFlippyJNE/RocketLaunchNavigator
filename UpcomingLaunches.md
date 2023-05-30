@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html>
 <head>
   <title>Rocket Launch Navigator</title>
   <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
 </head>
 <body>
-# Upcoming Launches
+  <h1>Upcoming Launches</h1>
 
 <style>
 body {
