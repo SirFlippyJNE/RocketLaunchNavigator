@@ -69,7 +69,7 @@
         try {
           const response = await fetch(apiUrl);
           if (!response.ok) {
-            throw new Error('Failed to fetch data from the API');
+            throw new Error('Error - 1010: Data Fetch Error');
           }
           const data = await response.json();
           if (data && data.results) {
