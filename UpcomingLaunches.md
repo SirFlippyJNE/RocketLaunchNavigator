@@ -2,11 +2,28 @@
 <head>
   <title>Upcoming Launches</title>
   <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
+  <div>  
+    <a href="https://www.rocketlaunchnavigator.com" class="button">Home</a>
+    <a href="https://www.rocketlaunchnavigator.com/PreviousLaunches" class="button">Previous Launches</a>
+    <a href="https://www.rocketlaunchnavigator.com/UpcomingLaunches" class="button">Upcoming Launches</a>
+  <div>
 </head>
 <body>
   <h1>Upcoming Launches</h1>
 <style>
-body {
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+  .button:hover {
+      background-color: #23527c;
+}
+  body {
   display: flex;
   flex-direction: column;
   align-items: center;
