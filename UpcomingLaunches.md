@@ -4,12 +4,13 @@
   <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
   <div>  
     <a href="https://www.rocketlaunchnavigator.com" class="button">Home</a>
-    <a href="https://www.rocketlaunchnavigator.com/PreviousLaunches" class="button">Previous Launches</a>
     <a href="https://www.rocketlaunchnavigator.com/UpcomingLaunches" class="button">Upcoming Launches</a>
+    <a href="https://www.rocketlaunchnavigator.com/PreviousLaunches" class="button">Previous Launches</a>
   <div>
-</head>
+<head>
 <body>
   <h1>Upcoming Launches</h1>
+  <p>572 Upcoming Launches</p>
 <style>
   .button {
     display: inline-block;
