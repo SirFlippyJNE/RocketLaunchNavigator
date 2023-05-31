@@ -1,13 +1,13 @@
 <html>
 <head>
-  <title>Upcoming Launches</title>
+  <title>Previous Launches</title>
   <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
   <div>  
     <a href="https://www.rocketlaunchnavigator.com" class="button">Home</a>
-    <a href="https://www.rocketlaunchnavigator.com/PreviousLaunches" class="button">Previous Launches</a>
     <a href="https://www.rocketlaunchnavigator.com/UpcomingLaunches" class="button">Upcoming Launches</a>
+    <a href="https://www.rocketlaunchnavigator.com/PreviousLaunches" class="button">Previous Launches</a>
   <div>
-</head>
+<head>
 <body>
   <h1>Upcoming Launches</h1>
 <style>
