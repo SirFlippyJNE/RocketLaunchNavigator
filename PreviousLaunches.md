@@ -1,7 +1,7 @@
 # Previous Launches
 
 [Home](https://www.rocketlaunchnavigator.com) |
-[Upcoming Launches](https://www.rocketlaunchnavigator.com/UpcomingLaunches) 
+[Upcoming Launches](https://www.rocketlaunchnavigator.com/UpcomingLaunches) |
 [Previous Launches](https://www.rocketlaunchnavigator.com/PreviousLaunches)
 
 
