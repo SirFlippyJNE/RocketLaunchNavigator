@@ -131,5 +131,5 @@ fetchRocketLaunches();
 </div>
 
 </body>
-</html>
+<html>
 
