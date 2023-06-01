@@ -1,15 +1,10 @@
-<html>
-<head>
-  <title>Previous Launches</title>
-  <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
-  <div>  
-    <a href="https://www.rocketlaunchnavigator.com" class="button">Home</a>
-    <a href="https://www.rocketlaunchnavigator.com/UpcomingLaunches" class="button">Upcoming Launches</a>
-    <a href="https://www.rocketlaunchnavigator.com/PreviousLaunches" class="button">Previous Launches</a>
-  <div>
-<head>
-<body>
-  <h1>Upcoming Launches</h1>
+# Previous Launches
+
+[Home](https://www.rocketlaunchnavigator.com) |
+[Upcoming Launches](https://www.rocketlaunchnavigator.com/UpcomingLaunches) 
+[Previous Launches](https://www.rocketlaunchnavigator.com/PreviousLaunches)
+
+
 <style>
   .button {
     display: inline-block;
@@ -79,6 +74,8 @@ p {
 </style>
 
 <div class="launch-container">
+</div>
+
 <script>
 const apiKey = '2578b44e83f2942913e1e7775ffdb3a9beed808d'; // Replace 'YOUR_API_KEY' with your actual API key
 const apiUrl = `https://ll.thespacedevs.com/2.2.0/launch/previous/?limit=572&api_key=${apiKey}`;
@@ -128,8 +125,3 @@ async function fetchRocketLaunches() {
 
 fetchRocketLaunches();
 </script>
-</div>
-
-</body>
-<html>
-
