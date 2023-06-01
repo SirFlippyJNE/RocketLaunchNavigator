@@ -93,7 +93,7 @@ async function fetchRocketLaunches() {
     if (data && data.results) {
       const launches = data.results.filter((launch) => launch.status.id !== 3 && launch.status.id !== 4);
       launches.forEach((launch) => {
-        const { name, net, pad, rocket, webcast_live, status, net_precision, image } = launch;
+        const { name, net, pad, rocket, status, image } = launch;
         const launchItem = document.createElement('div');
         launchItem.classList.add('launch-item');
         const launchImage = new Image();
@@ -107,10 +107,8 @@ async function fetchRocketLaunches() {
           <p>Rocket: ${rocket.configuration.full_name}</p>
           <p>NET: ${net}</p>
           <p>Status: ${status.abbrev}</p>
-          <p>NET Precestion: ${net_precision && net_precision.name}</p> <!-- Add null check for net_precision -->
           <p>Launch Pad: ${pad.name}</p>
           <p>Pad Location: ${pad.location.name}</p>
-          <p>Webcast Live: ${webcast_live}</p>
         `;
         launchItem.appendChild(launchImage);
         launchItem.appendChild(launchBox);
