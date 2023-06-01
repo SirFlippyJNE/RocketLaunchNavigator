@@ -1,3 +1,4 @@
+<html>
 <head>
   <title>Previous Launches</title>
   <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
@@ -131,4 +132,4 @@ fetchRocketLaunches();
 </div>
 
 </body>
-
+</html>
