@@ -82,7 +82,7 @@ p {
 <div class="launch-container">
 <script>
 const apiKey = '2578b44e83f2942913e1e7775ffdb3a9beed808d'; // Replace 'YOUR_API_KEY' with your actual API key
-const apiUrl = `https://ll.thespacedevs.com/2.2.0/launch/previous/?limit=100&api_key=${apiKey}`;
+const apiUrl = `https://ll.thespacedevs.com/2.2.0/launch/previous/?api_key=${apiKey}`;
 
 async function fetchRocketLaunches() {
   try {
