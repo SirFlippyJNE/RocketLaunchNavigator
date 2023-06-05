@@ -118,7 +118,8 @@ async function fetchRocketLaunches() {
     } else {
       const noDataText = document.createElement('p');
       noDataText.textContent = 'No launch data available.';
-      document.body.appendChild(noDataText);
+      document.querySelector('.launch-container').appendChild(noDataText);
+
     }
   } catch (error) {
     const errorText = document.createElement('p');
