@@ -75,6 +75,10 @@
       margin-bottom: 0px;
       margin-top: 30px; /* Adjust the margin-top as desired */
     }
+    
+    .rocket-name {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -105,7 +109,7 @@
               launchBox.classList.add('launch-box');
               launchBox.innerHTML = `
                 <h2>${name}</h2>
-                <p>Rocket: ${rocket.configuration.full_name}</p>
+                <p><span class="rocket-name">${rocket.configuration.full_name}</span></p>
                 <p>NET: ${net}</p>
                 <p>Status: ${status.abbrev}</p>
                 <p>NET Precestion: ${net_precision && net_precision.name}</p> <!-- Add null check for net_precision -->
@@ -113,6 +117,7 @@
                 <p>Pad Location: ${pad.location.name}</p>
                 <p>Webcast Live: ${webcast_live}</p>
               `;
+
               launchItem.appendChild(launchImage);
               launchItem.appendChild(launchBox);
               document.querySelector('.launch-container').appendChild(launchItem);
