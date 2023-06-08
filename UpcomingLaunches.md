@@ -77,10 +77,6 @@ p {
   margin-bottom: 0px;
   margin-top: 30px; /* Adjust the margin-top as desired */
 }
-  
-.rocket-name {
-  text-decoration: underline;
-}
 </style>
 
 <div class="launch-container">
@@ -108,7 +104,7 @@ async function fetchRocketLaunches() {
         const launchBox = document.createElement('div');
         launchBox.classList.add('launch-box');
         launchBox.innerHTML = `
-          <h2><span class="rocket-name">${name}<span></h2>
+          <h2>${name}</h2>
           <p>Rocket: ${rocket.configuration.full_name}</p>
           <p>NET: ${net}</p>
           <p>Status: ${status.abbrev}</p>
