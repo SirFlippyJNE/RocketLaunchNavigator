@@ -48,7 +48,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: auto; /* Adjust the height property or remove it */
+  height: 400; /* Adjust the height property or remove it */
 }
 
 .launch-item {
