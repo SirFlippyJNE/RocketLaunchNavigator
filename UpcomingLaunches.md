@@ -108,7 +108,7 @@ async function fetchRocketLaunches() {
         const launchBox = document.createElement('div');
         launchBox.classList.add('launch-box');
         launchBox.innerHTML = `
-          <h2><span class="rocket-name"${name}<span></h2>
+          <h2><span class="rocket-name">${name}<span></h2>
           <p>Rocket: ${rocket.configuration.full_name}</p>
           <p>NET: ${net}</p>
           <p>Status: ${status.abbrev}</p>
