@@ -48,7 +48,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 400; /* Adjust the height property or remove it */
+  height: 400px;
 }
 
 .launch-item {
@@ -75,7 +75,11 @@ p {
   width: 400px; /* Adjust the width as desired */
   height: auto; /* Maintain aspect ratio */
   margin-bottom: 0px;
-  margin-top: 20px; /* Adjust the margin-top as desired */
+  margin-top: 30px; /* Adjust the margin-top as desired */
+}
+  
+.rocket-name {
+  text-decoration: underline;
 }
 </style>
 
@@ -104,7 +108,7 @@ async function fetchRocketLaunches() {
         const launchBox = document.createElement('div');
         launchBox.classList.add('launch-box');
         launchBox.innerHTML = `
-          <h2>${name}</h2>
+          <h2><span> class="rocket-name"${name}<span></h2>
           <p>Rocket: ${rocket.configuration.full_name}</p>
           <p>NET: ${net}</p>
           <p>Status: ${status.abbrev}</p>
