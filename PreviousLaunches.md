@@ -3,9 +3,9 @@
   <title>Previous Launches</title>
   <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
   <div>  
-    <a href="https://www.rocketlaunchnavigator.com" class="button">Home</a>
-    <a href="https://www.rocketlaunchnavigator.com/UpcomingLaunches" class="button">Upcoming Launches</a>
-    <a href="https://www.rocketlaunchnavigator.com/PreviousLaunches" class="button">Previous Launches</a>
+    <a href="index.html" class="button">Home</a>
+    <a href="UpcomingLaunches.md" class="button">Upcoming Launches</a>
+    <a href="PreviousLaunches.md" class="button">Previous Launches</a>
   <div>
 <head>
 <body>
