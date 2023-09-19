@@ -5,7 +5,7 @@
   <div>  
     <a href="index.html" class="button">Home</a>
     <a href="UpcomingLaunches.md" class="button">Upcoming Launches</a>
-    <a href="PreviousLaunches.md" class="button">Previous Launches</a>
+    <a href="www.rocketlaunchnavigator.com/PreviousLaunches" class="button">Previous Launches</a>
   <div>
 <head>
 <body>
