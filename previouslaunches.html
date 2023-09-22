@@ -10,8 +10,7 @@
             <a href="index" class="button">Home</a> 
             <a href="upcominglaunches" class="button">Upcoming Launches</a> 
             <a href="previouslaunches" class="button">Previous Launches</a>
-            <h1>Upcoming Launches</h1>
-            <h2>572 upcoming launches</h2>
+            <h1>Previous Launches</h1>
         </header>
         <div class="launch-container">
             <script>
@@ -22,7 +21,7 @@
                 try {
                   const response = await fetch(apiUrl);
                   if (!response.ok) {
-                    throw new Error('Failed to fetch data from the API');
+                    throw new Error('Database Callback Failure');
                   }
                   const data = await response.json();
                   if (data && data.results) {
