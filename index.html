@@ -8,6 +8,7 @@
     <a href="index" class="button">Home</a> 
     <a href="upcominglaunches" class="button">Upcoming Launches</a> 
     <a href="previouslaunches" class="button">Previous Launches</a>
+    <a href="all-launches" class="button">All Launches</a>
   <div>
   <header>Rocket Launch Navigator</header>
   <p>A navigator for upcoming rocket launches</p>
@@ -22,7 +23,7 @@
         try {
           const response = await fetch(apiUrl);
           if (!response.ok) {
-            throw new Error('Failed to fetch data from the API');
+            throw new Error('Database Callback Failure');
           }
           const data = await response.json();
           if (data && data.results) {
