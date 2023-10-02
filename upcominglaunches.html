@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Previous Launches | Rocket Launch Navigator</title>
+        <link rel="icon" href="RocketLaunchNavigatorIcon.ico" type="image/ico">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+          <a href="index" class="button">Home</a> 
+          <a href="upcominglaunches" class="button">Upcoming Launches</a> 
+          <a href="previouslaunches" class="button">Previous Launches</a>
+          <a href="all-launches" class="button">All Launches</a>
+            <header>Previous Launches</header>
+        </header>
+        <div class="launch-container">
+            <script>
+              let renderedLaunches = 0;
+              const apiKey = '2578b44e83f2942913e1e7775ffdb3a9beed808d'; // Replace 'YOUR_API_KEY' with your actual API key
+              const apiUrl = `https://ll.thespacedevs.com/2.2.0/launch/upcoming/?limit=572&api_key=${apiKey}`;
+              async function fetchRocketLaunches() {
+                try {
+                  const response = await fetch(apiUrl);
+                  if (!response.ok) {
+                    throw new Error('Database Callback Failure');
+                  }
+                  const data = await response.json();
+                  if (data && data.results) {
+                    const launches = data.results.filter((launch) => launch.status.id !== 3 && launch.status.id !== 4);
+        
+                    launches.forEach((launch) => {
+                      const { name, net, pad, rocket, webcast_live, status, net_precision, image } = launch;
+                      const launchItem = document.createElement('div');
+                      launchItem.classList.add('launch-item');
+                      const launchImage = new Image();
+                      launchImage.src = image; // Replace with actual image URL
+                      launchImage.alt = 'Launch Image';
+                      launchImage.classList.add('launch-image');
+                      const launchBox = document.createElement('div');
+                      launchBox.classList.add('launch-box');
+                      launchBox.innerHTML = `
+                        <h2><span class="rocket-name">${name}<span></h2>
+                        <p>${rocket.configuration.full_name}</p>
+                        <p>NET: ${net}</p>
+                        <p>Status: ${status.abbrev}</p>
+                        <p>NET Precestion: ${net_precision && net_precision.name}</p> <!-- Add null check for net_precision -->
+                        <p>Launch Pad: ${pad.name}</p>
+                        <p>Pad Location: ${pad.location.name}</p>
+                        <p>Webcast Live: ${webcast_live}</p>
+                      `;
+        
+                      launchItem.appendChild(launchImage);
+                      launchItem.appendChild(launchBox);
+                      document.querySelector('.launch-container').appendChild(launchItem);
+        
+                      renderedLaunches++;
+                      if (renderedLaunches >= 60) {
+                        return;
+                      }
+                    });
+                  } else {
+                    const noDataText = document.createElement('p');
+                    noDataText.textContent = 'No launch data available.';
+                    document.body.appendChild(noDataText);
+                  }
+                } catch (error) {
+                  const errorText = document.createElement('p');
+                  errorText.textContent = `An error occurred while fetching the data: ${error}`;
+                  document.body.appendChild(errorText);
+                }
+              }
+        
+              fetchRocketLaunches();
+            </script>
+          </div>
+    </body>
+</html>
