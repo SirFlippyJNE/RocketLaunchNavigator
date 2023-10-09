@@ -28,14 +28,10 @@
 
                   if (Array.isArray(data)) { // Assuming your API returns an array of launches
                     data.forEach((launch) => {
-                      const { name, mission, date, image } = launch; // Replace with actual property names
+                      const { name, mission, date} = launch; // Replace with actual property names
                       const launchItem = document.createElement('div');
                       launchItem.classList.add('launch-item');
 
-                      const launchImage = new Image();
-                      launchImage.src = image; // Replace with actual image URL
-                      launchImage.alt = 'Launch Image';
-                      launchImage.classList.add('launch-image');
 
                       const launchBox = document.createElement('div');
                       launchBox.classList.add('launch-box');
@@ -45,7 +41,6 @@
                         <p>Date: ${date}</p>
                       `;
 
-                      launchItem.appendChild(launchImage);
                       launchItem.appendChild(launchBox);
                       document.querySelector('.launch-container').appendChild(launchItem);
 
