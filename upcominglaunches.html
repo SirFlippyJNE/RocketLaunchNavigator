@@ -16,37 +16,39 @@
         <div class="launch-container">
             <script>
               let renderedLaunches = 0;
-              const apiUrl = `127.0.0.1:5000/launches/upcoming`;
+              const apiUrl = 'http://127.0.0.1:5000/launches/upcoming'; // Update this URL
+
               async function fetchRocketLaunches() {
                 try {
                   const response = await fetch(apiUrl);
                   if (!response.ok) {
-                    throw new Error('Database Callback Failure');
+                    throw new Error('Failed to fetch data from the API');
                   }
                   const data = await response.json();
-                  if (data && data.results) {
-                    const launches = data.results.filter((launch) => launch.status.id !== 3 && launch.status.id !== 4);
-        
-                    launches.forEach((launch) => {
-                      const { rocket, mission, date } = launch;
+
+                  if (Array.isArray(data)) { // Assuming your API returns an array of launches
+                    data.forEach((launch) => {
+                      const { name, mission, date, image } = launch; // Replace with actual property names
                       const launchItem = document.createElement('div');
                       launchItem.classList.add('launch-item');
+
                       const launchImage = new Image();
                       launchImage.src = image; // Replace with actual image URL
                       launchImage.alt = 'Launch Image';
                       launchImage.classList.add('launch-image');
+
                       const launchBox = document.createElement('div');
                       launchBox.classList.add('launch-box');
                       launchBox.innerHTML = `
-                        <h2>${rocket}</h2>
+                        <h2>${name}</h2>
                         <p>Mission: ${mission}</p>
                         <p>Date: ${date}</p>
                       `;
-        
+
                       launchItem.appendChild(launchImage);
                       launchItem.appendChild(launchBox);
                       document.querySelector('.launch-container').appendChild(launchItem);
-        
+
                       renderedLaunches++;
                       if (renderedLaunches >= 60) {
                         return;
@@ -63,7 +65,7 @@
                   document.body.appendChild(errorText);
                 }
               }
-        
+
               fetchRocketLaunches();
             </script>
           </div>
