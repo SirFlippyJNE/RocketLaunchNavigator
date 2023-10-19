@@ -26,13 +26,8 @@
                 }
                 const data = await response.json();
                 if (data && data.results) {
-                  try{
-                    const launches = data.results.filter((launch) => launch.status.id == 200);}
-                  catch (error) {
-                    const errorText = document.createElement('p');
-                    errorText.textContent = `An error occurred while fetching the data: ${error}`;
-                    document.body.appendChild(errorText);
-                  }
+                  const launches = data.results.filter((launch) => launch.status.id !== 1 && launch.status.id !== 2);
+
                   launches.forEach((launch) => {
                     const { name, net, pad, rocket, webcast_live, status, net_precision, image } = launch;
                     const launchItem = document.createElement('div');
