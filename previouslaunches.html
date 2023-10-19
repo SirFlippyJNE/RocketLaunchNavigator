@@ -26,7 +26,7 @@
                 }
                 const data = await response.json();
                 if (data && data.results) {
-                  const launches = data.results.filter((launch) => launch.status.id == 3 && launch.status.id == 4);
+                  const launches = data.results.filter((launch) => launch.status.id == 200);
 
                   launches.forEach((launch) => {
                     const { name, net, pad, rocket, webcast_live, status, net_precision, image } = launch;
