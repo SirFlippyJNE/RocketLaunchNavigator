@@ -35,11 +35,11 @@
                         const alt_image = 'altimage.png'
                         launchItem.classList.add('launch-item');
                         const launchImage = new Image();
-                        if (image == true){
+                        try {
                           launchImage.src = image; // Replace with actual image URL
                         }
-                        else {
-                          launchImage.src = alt_image
+                        finally {
+                          launchImage.alt = alt_image
                         }
                         launchImage.classList.add('launch-image');
                         const launchBox = document.createElement('div');
