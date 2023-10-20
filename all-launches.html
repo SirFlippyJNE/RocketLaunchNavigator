@@ -32,10 +32,15 @@
                       launches.forEach((launch) => {
                         const { name, net, pad, rocket, webcast_live, status, net_precision, image } = launch;
                         const launchItem = document.createElement('div');
+                        const alt_image = 'altimage.png'
                         launchItem.classList.add('launch-item');
                         const launchImage = new Image();
-                        launchImage.src = image; // Replace with actual image URL
-                        launchImage.alt = 'altimage.png';
+                        if (image == true){
+                          launchImage.src = image; // Replace with actual image URL
+                        }
+                        else {
+                          launchImage.src = alt_image
+                        }
                         launchImage.classList.add('launch-image');
                         const launchBox = document.createElement('div');
                         launchBox.classList.add('launch-box');
